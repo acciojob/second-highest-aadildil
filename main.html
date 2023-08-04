@@ -10,6 +10,14 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+
+		
+			const set=new Set(arr);
+			if(set.length===1||set.length===0)
+				return -Infinity;
+			const arrSort=Array.from(set).sort((a,b)=>b-a);
+			return arrSort[1];
+			
 			
 		}
 
@@ -21,7 +29,7 @@
 			}
 			alert(secondHighest(arr));
 		}
-		Main();
+		 Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
